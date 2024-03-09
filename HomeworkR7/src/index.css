@@ -32,7 +32,27 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  position: relative;
 }
+
+body::before {
+  content: ""; /* обов'язково для псевдоелементів */
+  position: absolute; /* позиціонуємо псевдоелемент відносно батьківського елемента */
+  top: 0;
+  left: 0;
+  width: 100%; /* займає всю ширину елемента */
+  height: 100%; /* займає всю висоту елемента */
+  background-image: url(./assets/notes.jpg), linear-gradient(rgba(75, 111, 165, 0.6), #ffe4e1 );
+  background-repeat: no-repeat;
+  background-size: cover; 
+  opacity: 0.15; /* прозорість (від 0 до 1, де 0 - повна прозорість, 1 - повна непрозорість) */
+  z-index: -1; /* розміщаємо псевдоелемент позаду контенту */
+  /* Інші властивості фонового зображення */
+}
+
+
+
+
 
 h1 {
   font-size: 3.2em;

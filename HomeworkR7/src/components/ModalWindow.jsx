@@ -24,7 +24,7 @@ export default function ModalWindow ({ addTodo }){
     
     return (
         <div>
-        <Button onClick={handleOpen} style={{marginLeft:"100px" }} variant="contained">Create Task</Button>
+        <Button onClick={handleOpen} style={{marginLeft:"200px" }} variant="contained">Create Task</Button>
         <Modal
             open={open}
             onClose={handleClose}
